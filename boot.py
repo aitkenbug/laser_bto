@@ -1,8 +1,9 @@
+import ugit
+ugit.pull_all()
+
 import machine, neopixel
 import time
-import ugit
 
-ugit.pull_all()
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
 
