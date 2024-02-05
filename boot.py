@@ -1,7 +1,7 @@
 import machine, neopixel
 import time
 
-LED_POWER = Pin(19, mode = Pin.OUT, value = 1)
+LED_POWER = machine.Pin(19, mode = Pin.OUT, value = 1)
 
 np = neopixel.NeoPixel(machine.Pin(18), 1)
 
