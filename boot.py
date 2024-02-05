@@ -1,6 +1,3 @@
-import ugit
-ugit.pull_all()
-
 import machine, neopixel
 import time
 
