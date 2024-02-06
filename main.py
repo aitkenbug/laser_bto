@@ -2,11 +2,15 @@ import machine, neopixel
 import time
 import network
 from secrets import secrets
+import webrepl
+
 ap = network.WLAN(network.AP_IF)
 ap.active(True)
 ap.config(essid='laser', password='Gemini')
 while ap.active() == False:
   pass
+
+webrepl.start()
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
 
