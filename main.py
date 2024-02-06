@@ -5,7 +5,8 @@ from secrets import secrets
 ap = network.WLAN(network.AP_IF)
 ap.active(True)
 ap.config(essid='laser', password='Gemini')
-
+while ap.active() == False:
+  pass
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
 
