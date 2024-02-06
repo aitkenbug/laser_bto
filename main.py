@@ -4,9 +4,9 @@ import network
 from secrets import secrets
 import webrepl
 
-ap = network.WLAN(network.AP_IF)
-ap.active(True)
-ap.config(essid='laser', password='Gemini')
+sta_if = network.WLAN(network.AP_IF)
+sta_if.active(True)
+sta_if.connect(secrets['ssid'], secrets['password'])
 while ap.active() == False:
   pass
 
