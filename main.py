@@ -2,10 +2,9 @@ import machine, neopixel
 import time
 import network
 from secrets import secrets
-sta_if = network.WLAN(network.STA_IF)
-sta_if.active(True)
-sta_if.connect(secrets['ssid'], secrets['password'])
-sta_if.isconnected()
+ap = network.WLAN(network.AP_IF)
+ap.active(True)
+ap.config(essid='laser', password='Gemini')
 
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
