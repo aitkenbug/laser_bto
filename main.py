@@ -1,7 +1,6 @@
 import machine, neopixel
 import time
 import network
-from secrets import secrets
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
 
