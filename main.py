@@ -1,5 +1,11 @@
 import machine, neopixel
 import time
+import network
+from secrets import secrets
+sta_if = network.WLAN(network.STA_IF)
+sta_if.active(True)
+sta_if.connect(secrets['ssid'], secrets['password'])
+sta_if.isconnected()
 
 
 LED_POWER = machine.Pin(17, mode = machine.Pin.OUT, value = 1)
